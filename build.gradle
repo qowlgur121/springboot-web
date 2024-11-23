@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0' // 스프링 부트 플러그인
+    id 'io.spring.dependency-management' version '1.1.0' //스프링의 의존성을 자동으로 관리
+}
+
+group = 'com.jihyeok'
+version = '1.0-SNAPSHOT'
+sourceCompatibility='17' //자바 소스를 컴파일할 때 사용할 자바 버전
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web' // 웹 관련 기능 제공
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' //테스트 기능 제공
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+test {
+    useJUnitPlatform()
+}
