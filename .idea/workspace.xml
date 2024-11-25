@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/QuizController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/JUnitCycleQuiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/JUnitCycleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/JUnitQuiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/JUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/QuizControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/TestControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="test: controller tests">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/insert-members.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/MemberRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/TestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/TestControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,38 +92,47 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build springboot-web.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitCycleQuiz.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitCycleTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitQuiz.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.QuizControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SpringBootWebApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/jihyeokbae/Desktop/workspace/study/springboot-web/src/main/java/com/jihyeok/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build springboot-web.executor": "Run",
+    "Gradle.JUnitCycleQuiz.executor": "Run",
+    "Gradle.JUnitCycleTest.executor": "Run",
+    "Gradle.JUnitQuiz.executor": "Run",
+    "Gradle.JUnitTest.executor": "Run",
+    "Gradle.MemberRepositoryTest.deleteAll.executor": "Run",
+    "Gradle.MemberRepositoryTest.deleteMemberById.executor": "Debug",
+    "Gradle.MemberRepositoryTest.executor": "Run",
+    "Gradle.MemberRepositoryTest.getAllMembers.executor": "Debug",
+    "Gradle.MemberRepositoryTest.getMemberById.executor": "Run",
+    "Gradle.MemberRepositoryTest.getMemberByName.executor": "Run",
+    "Gradle.MemberRepositoryTest.saveMember.executor": "Run",
+    "Gradle.MemberRepositoryTest.saveMembers.executor": "Run",
+    "Gradle.MemberRepositoryTest.update.executor": "Run",
+    "Gradle.QuizControllerTest.executor": "Run",
+    "Gradle.TestControllerTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.SpringBootWebApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/jihyeokbae/Desktop/workspace/study/springboot-web/src/main/java/com/jihyeok/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -134,8 +141,8 @@
       <recent name="com.jihyeok.springbootweb" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.QuizControllerTest">
-    <configuration name="JUnitCycleQuiz" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.MemberRepositoryTest.update">
+    <configuration name="MemberRepositoryTest.deleteAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -148,7 +155,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;JUnitCycleQuiz&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.deleteAll&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -159,7 +166,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="JUnitCycleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MemberRepositoryTest.deleteMemberById" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -172,7 +179,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;JUnitCycleTest&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.deleteMemberById&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -183,7 +190,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="JUnitQuiz" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MemberRepositoryTest.saveMember" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -196,7 +203,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;JUnitQuiz&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.saveMember&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,7 +214,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="QuizControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MemberRepositoryTest.saveMembers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -220,7 +227,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.jihyeok.springbootweb.QuizControllerTest&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.saveMembers&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -231,7 +238,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MemberRepositoryTest.update" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -244,7 +251,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.jihyeok.springbootweb.TestControllerTest&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.update&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -257,11 +264,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.QuizControllerTest" />
-        <item itemvalue="Gradle.TestControllerTest" />
-        <item itemvalue="Gradle.JUnitCycleQuiz" />
-        <item itemvalue="Gradle.JUnitQuiz" />
-        <item itemvalue="Gradle.JUnitCycleTest" />
+        <item itemvalue="Gradle.MemberRepositoryTest.update" />
+        <item itemvalue="Gradle.MemberRepositoryTest.deleteAll" />
+        <item itemvalue="Gradle.MemberRepositoryTest.deleteMemberById" />
+        <item itemvalue="Gradle.MemberRepositoryTest.saveMembers" />
+        <item itemvalue="Gradle.MemberRepositoryTest.saveMember" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +289,8 @@
       <updated>1732345364415</updated>
       <workItem from="1732345365449" duration="26096000" />
       <workItem from="1732451625895" duration="71000" />
-      <workItem from="1732453691127" duration="622000" />
+      <workItem from="1732453691127" duration="3862000" />
+      <workItem from="1732492534794" duration="6539000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -292,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732371366043</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test: controller tests">
+      <option name="closed" value="true" />
+      <created>1732459466912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732459466912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +316,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="test: controller tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: controller tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
