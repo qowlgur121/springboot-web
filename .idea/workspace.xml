@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: 블로그 글 삭제 API 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,50 +101,51 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.BlogApiControllerTest.addArticle.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BlogApiControllerTest.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.BlogApiControllerTest.findAllArticles.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build springboot-web.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitCycleQuiz.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitCycleTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitQuiz.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.deleteAll.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.deleteMemberById.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.MemberRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.getAllMembers.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.MemberRepositoryTest.getMemberById.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.getMemberByName.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.saveMember.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.saveMembers.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.update.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.QuizControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SpringBootWebApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/jihyeokbae/Desktop/workspace/study/springboot-web/src/main/java/com/jihyeok/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BlogApiControllerTest.addArticle.executor": "Run",
+    "Gradle.BlogApiControllerTest.deleteArticle.executor": "Run",
+    "Gradle.BlogApiControllerTest.executor": "Debug",
+    "Gradle.BlogApiControllerTest.findAllArticles.executor": "Run",
+    "Gradle.Build springboot-web.executor": "Run",
+    "Gradle.JUnitCycleQuiz.executor": "Run",
+    "Gradle.JUnitCycleTest.executor": "Run",
+    "Gradle.JUnitQuiz.executor": "Run",
+    "Gradle.JUnitTest.executor": "Run",
+    "Gradle.MemberRepositoryTest.deleteAll.executor": "Run",
+    "Gradle.MemberRepositoryTest.deleteMemberById.executor": "Debug",
+    "Gradle.MemberRepositoryTest.executor": "Run",
+    "Gradle.MemberRepositoryTest.getAllMembers.executor": "Debug",
+    "Gradle.MemberRepositoryTest.getMemberById.executor": "Run",
+    "Gradle.MemberRepositoryTest.getMemberByName.executor": "Run",
+    "Gradle.MemberRepositoryTest.saveMember.executor": "Run",
+    "Gradle.MemberRepositoryTest.saveMembers.executor": "Run",
+    "Gradle.MemberRepositoryTest.update.executor": "Run",
+    "Gradle.QuizControllerTest.executor": "Run",
+    "Gradle.TestControllerTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.SpringBootWebApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/jihyeokbae/Desktop/workspace/study/springboot-web/src/main/java/com/jihyeok/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -157,7 +155,7 @@
       <recent name="com.jihyeok.springbootweb" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBootWebApplication">
+  <component name="RunManager" selected="Gradle.BlogApiControllerTest.deleteArticle">
     <configuration name="BlogApiControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -206,6 +204,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="BlogApiControllerTest.deleteArticle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest.deleteArticle&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="BlogApiControllerTest.findAllArticles" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -220,30 +242,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest.findAllArticles&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MemberRepositoryTest.update" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.update&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -269,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BlogApiControllerTest.deleteArticle" />
         <item itemvalue="Spring Boot.SpringBootWebApplication" />
         <item itemvalue="Gradle.BlogApiControllerTest.findAllArticles" />
         <item itemvalue="Gradle.BlogApiControllerTest" />
         <item itemvalue="Gradle.BlogApiControllerTest.addArticle" />
-        <item itemvalue="Gradle.MemberRepositoryTest.update" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +300,7 @@
       <workItem from="1732616964663" duration="4450000" />
       <workItem from="1732621463334" duration="81000" />
       <workItem from="1732621573451" duration="46000" />
-      <workItem from="1732621751555" duration="333000" />
+      <workItem from="1732621751555" duration="2733000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -360,7 +358,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732544246778</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: 블로그 글 조회 API 구현">
+      <option name="closed" value="true" />
+      <created>1732622304968</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732622304968</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix: database test data setup">
+      <option name="closed" value="true" />
+      <created>1732622438485</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732622438485</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +388,9 @@
     <MESSAGE value="feat: 블로그 글 작성 기능 API 추가" />
     <MESSAGE value="test: 블로그 글 작성 기능 API 테스트 코드 추가" />
     <MESSAGE value="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가" />
+    <MESSAGE value="feat: 블로그 글 조회 API 구현" />
+    <MESSAGE value="fix: database test data setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: database test data setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

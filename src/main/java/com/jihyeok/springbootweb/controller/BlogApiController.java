@@ -7,10 +7,7 @@ import com.jihyeok.springbootweb.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,5 +40,18 @@ public class BlogApiController {
         // Spring의 ResponseEntity를 사용하여 HTTP 응답을 생성
         return ResponseEntity.ok() // ok()는 HTTP 상태 코드 200 (OK)설정하고
                 .body(articles); // 데이터베이스에서 가져온 게시글 목록을 클라이언트에게 JSON 형태로 반환한다. @RestController는 객체를 JSON, XML 등으로 변환하여 응답으로 보냄.
+    }
+
+    /**
+     * {id}는 경로 변수(path variable)를 나타내며, 삭제할 게시글의 ID를 나타낸다.
+     * 예를 들어, 게시글 ID가 1인 게시글을 삭제하려면 /api/articles/1로 DELETE 요청을 보내야 한다.
+     */
+    @DeleteMapping("/api/articles/{id}")
+    public ResponseEntity<Void> deleteArticle(@PathVariable("id") long id) { //<Void>는 응답 본문(body)에 데이터가 없음을 의미.
+        // @PathVariable 어노테이션은 경로 변수 {id}의 값을 id라는 이름의 long 타입 변수에 할당
+        blogService.delete(id);
+
+        return ResponseEntity.ok()
+                .build();
     }
 }
