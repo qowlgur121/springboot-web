@@ -4,10 +4,15 @@ spring:
     properties:
       hibernate:
         format_sql: true
-    defer-datasource-initialization: true
+
+    defer-datasource-initialization: false
+    ## defer-datasource-initialization : 즉시 데이터 소스 초기화 설정 (true : 지연 / false : 즉시 초기화 설정)
+    hibernate:
+      ddl-auto: validate # <--- create 대신 validate로 변경
   datasource:
-    # 데이터 소스 설정: 메모리 내 H2 데이터베이스 사용
     url: jdbc:h2:mem:testdb
+    username: sa
+  ## H2 콘솔 활성화
   h2:
     console:
       enabled: true
