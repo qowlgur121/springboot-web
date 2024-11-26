@@ -3,6 +3,7 @@ package com.jihyeok.springbootweb.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jihyeok.springbootweb.domain.Article;
 import com.jihyeok.springbootweb.dto.AddArticleRequest;
+import com.jihyeok.springbootweb.dto.UpdateArticleRequest;
 import com.jihyeok.springbootweb.repository.BlogRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -147,5 +148,37 @@ class BlogApiControllerTest {
         List<Article> articles = blogRepository.findAll();
 
         Assertions.assertThat(articles).isEmpty();
+    }
+
+    @DisplayName("updateArticle: 블로그 글 수정에 성공한다.")
+    @Test
+    public void updateArticle() throws Exception {
+        // given
+        final String url = "/api/articles/{id}";
+        final String title = "title";
+        final String content = "content";
+
+        Article savedArticle = blogRepository.save(Article.builder()
+                .title(title)
+                .content(content)
+                .build());
+
+        final String newTitle = "new title";
+        final String newContent = "new content";
+
+        UpdateArticleRequest request = new UpdateArticleRequest(newTitle, newContent);
+
+        // when
+        ResultActions result = mockMvc.perform(MockMvcRequestBuilders.put(url, savedArticle.getId()) // PUT 요청을 생성하고, savedArticle.getId()를 사용하여 경로 변수 {id}에 실제 게시글 ID를 설정
+                .contentType(MediaType.APPLICATION_JSON_VALUE) // 요청 본문의 콘텐츠 타입을 application/json으로 설정
+                .content(objectMapper.writeValueAsString(request))); // UpdateArticleRequest 객체를 JSON 문자열로 변환하여 요청 본문에 설정. 객체 -> JSON
+
+        // then
+        result.andExpect(MockMvcResultMatchers.status().isOk());
+
+        Article article = blogRepository.findById(savedArticle.getId()).get(); // 수정된 게시글을 데이터베이스에서 다시 가져온다.
+
+        Assertions.assertThat(article.getTitle()).isEqualTo(newTitle);
+        Assertions.assertThat(article.getContent()).isEqualTo(newContent);
     }
 }
