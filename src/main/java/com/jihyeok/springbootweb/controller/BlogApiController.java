@@ -3,6 +3,7 @@ package com.jihyeok.springbootweb.controller;
 import com.jihyeok.springbootweb.domain.Article;
 import com.jihyeok.springbootweb.dto.AddArticleRequest;
 import com.jihyeok.springbootweb.dto.ArticleResponse;
+import com.jihyeok.springbootweb.dto.UpdateArticleRequest;
 import com.jihyeok.springbootweb.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -54,4 +55,16 @@ public class BlogApiController {
         return ResponseEntity.ok()
                 .build();
     }
+
+    @PutMapping("/api/articles/{id}")
+    public ResponseEntity<Article> updateArticle(@PathVariable("id") long id,
+                                                 @RequestBody UpdateArticleRequest request) {
+        // @PathVariable 어노테이션은 경로 변수 {id}의 값을 id라는 이름의 long 타입 변수에 할당
+        // @RequestBody 어노테이션은 요청 본문(body)의 내용을 UpdateArticleRequest 객체로 변환한다.
+        Article updatedArticle = blogService.update(id, request);
+
+        return ResponseEntity.ok()
+                .body(updatedArticle);
+    }
+
 }

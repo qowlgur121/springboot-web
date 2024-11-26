@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: 블로그 글 삭제 API 구현">
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="test: 블로그 글 삭제 API 테스트 코드 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/UpdateArticleRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/domain/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" afterDir="false" />
     </list>
@@ -77,6 +79,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/3.2.0/1c98c48b9fde0624337e19f3577fce20d19b78ea/spring-data-commons-3.2.0.jar!/org/springframework/data/repository/CrudRepository.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/3.2.0/59e49a0eca3d02c3dc593e7a881c19b932641894/spring-data-jpa-3.2.0.jar!/org/springframework/data/jpa/repository/JpaRepository.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/6.1.1/e86044a9b56e7c6860d643dd11b7b44624cce4a/spring-test-6.1.1.jar!/org/springframework/test/web/servlet/result/MockMvcResultMatchers.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/6.1.1/e86044a9b56e7c6860d643dd11b7b44624cce4a/spring-test-6.1.1.jar!/org/springframework/test/web/servlet/result/StatusResultMatchers.class" root0="SKIP_INSPECTION" />
@@ -105,8 +108,9 @@
   "keyToString": {
     "Gradle.BlogApiControllerTest.addArticle.executor": "Run",
     "Gradle.BlogApiControllerTest.deleteArticle.executor": "Run",
-    "Gradle.BlogApiControllerTest.executor": "Debug",
+    "Gradle.BlogApiControllerTest.executor": "Run",
     "Gradle.BlogApiControllerTest.findAllArticles.executor": "Run",
+    "Gradle.BlogApiControllerTest.updateArticle.executor": "Run",
     "Gradle.Build springboot-web.executor": "Run",
     "Gradle.JUnitCycleQuiz.executor": "Run",
     "Gradle.JUnitCycleTest.executor": "Run",
@@ -155,7 +159,7 @@
       <recent name="com.jihyeok.springbootweb" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BlogApiControllerTest.deleteArticle">
+  <component name="RunManager" selected="Gradle.BlogApiControllerTest">
     <configuration name="BlogApiControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -170,30 +174,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="BlogApiControllerTest.addArticle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest.addArticle&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -252,6 +232,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="BlogApiControllerTest.updateArticle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest.updateArticle&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="SpringBootWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="springboot-web.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jihyeok.springbootweb.SpringBootWebApplication" />
@@ -267,11 +271,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BlogApiControllerTest.deleteArticle" />
-        <item itemvalue="Spring Boot.SpringBootWebApplication" />
-        <item itemvalue="Gradle.BlogApiControllerTest.findAllArticles" />
         <item itemvalue="Gradle.BlogApiControllerTest" />
-        <item itemvalue="Gradle.BlogApiControllerTest.addArticle" />
+        <item itemvalue="Gradle.BlogApiControllerTest.updateArticle" />
+        <item itemvalue="Spring Boot.SpringBootWebApplication" />
+        <item itemvalue="Gradle.BlogApiControllerTest.deleteArticle" />
+        <item itemvalue="Gradle.BlogApiControllerTest.findAllArticles" />
       </list>
     </recent_temporary>
   </component>
@@ -301,6 +305,7 @@
       <workItem from="1732621463334" duration="81000" />
       <workItem from="1732621573451" duration="46000" />
       <workItem from="1732621751555" duration="2733000" />
+      <workItem from="1732624496201" duration="3454000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -374,7 +379,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732622438485</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: 블로그 글 삭제 API 구현">
+      <option name="closed" value="true" />
+      <created>1732624503626</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732624503626</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test: 블로그 글 삭제 API 테스트 코드 추가">
+      <option name="closed" value="true" />
+      <created>1732624563740</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732624563740</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +411,9 @@
     <MESSAGE value="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가" />
     <MESSAGE value="feat: 블로그 글 조회 API 구현" />
     <MESSAGE value="fix: database test data setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: database test data setup" />
+    <MESSAGE value="feat: 블로그 글 삭제 API 구현" />
+    <MESSAGE value="test: 블로그 글 삭제 API 테스트 코드 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: 블로그 글 삭제 API 테스트 코드 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

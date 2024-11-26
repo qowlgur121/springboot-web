@@ -2,9 +2,11 @@ package com.jihyeok.springbootweb.service;
 
 import com.jihyeok.springbootweb.domain.Article;
 import com.jihyeok.springbootweb.dto.AddArticleRequest;
+import com.jihyeok.springbootweb.dto.UpdateArticleRequest;
 import com.jihyeok.springbootweb.repository.BlogRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -33,5 +35,15 @@ public class BlogService {
 
     public void delete(long id) {
         blogRepository.deleteById(id);
+    }
+
+    @Transactional // 해당 메서드 내에서 발생하는 모든 데이터베이스 작업은 하나의 트랜잭션으로 관리
+    public Article update(long id, UpdateArticleRequest request) {
+        Article article = blogRepository.findById(id) // findById() 메서드는 Optional<Article> 객체를 반환. Optional은 값이 있을 수도 있고 없을 수도 있음을 나타내는 객체
+                .orElseThrow(() -> new IllegalArgumentException("not found: " + id)); //Optional 객체에 값이 없을 경우(해당 ID의 게시글이 없을 경우), IllegalArgumentException 예외를 발생시킨다.
+
+        article.update(request.getTitle(), request.getContent()); // 값 업데이트
+
+        return article; // 업데이트된 Article 객체를 반환
     }
 }
