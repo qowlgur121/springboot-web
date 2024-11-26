@@ -47,10 +47,10 @@ class BlogApiControllerTest {
 
     /**
      * HTTP에서는 데이터를 JSON이나 XML 같은 텍스트 기반 형식으로 주고받는데 자바는 객체를 사용하기 때문에 서로 변환할 수 있어야 한다.
-     *
+     * <p>
      * 직렬화: 자바 객체 -> JSON
      * 역직렬화: JSON -> 자바 객체
-     *
+     * <p>
      * 이런 변환을 해주는게 ObjectMapper
      */
     @Autowired
@@ -123,4 +123,29 @@ class BlogApiControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].title").value(title)); // JSON 응답의 첫 번째 요소의 title 필드 값이 title과 일치하는지 확인
     }
 
+
+    @DisplayName("deleteArticle: 블로그 글 삭제에 성공한다.")
+    @Test
+    public void deleteArticle() throws Exception {
+        // given
+        final String url = "/api/articles/{id}";
+        final String title = "title";
+        final String content = "content";
+
+        // 테스트용 게시글을 BlogRepository를 통해 데이터베이스에 저장하고, 저장된 Article 객체를 savedArticle 변수에 저장
+        Article savedArticle = blogRepository.save(Article.builder()
+                .title(title)
+                .content(content)
+                .build()); // .build()는 지금까지 설정된 필드들을 사용하여 실제 Article 객체를 생성하고 반환
+
+        // when
+        mockMvc.perform(MockMvcRequestBuilders.delete(url, savedArticle.getId()))
+                .andExpect(MockMvcResultMatchers.status().isOk()); // DELETE 요청의 HTTP 상태 코드가 200 (OK)인지 확인
+
+
+        // then
+        List<Article> articles = blogRepository.findAll();
+
+        Assertions.assertThat(articles).isEmpty();
+    }
 }
