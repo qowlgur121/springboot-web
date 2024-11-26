@@ -97,4 +97,30 @@ class BlogApiControllerTest {
         Assertions.assertThat(articles.get(0).getTitle()).isEqualTo(title);
         Assertions.assertThat(articles.get(0).getContent()).isEqualTo(content);
     }
+
+
+    @DisplayName("findAllArticles: 블로그 글 목록 조회에 성공한다.")
+    @Test
+    public void findAllArticles() throws Exception {
+        // given
+        final String url = "/api/articles";
+        final String title = "title";
+        final String content = "content";
+
+        blogRepository.save(Article.builder() // 엔티티를 하나 생성하여 데이터베이스에 저장
+                .title(title)
+                .content(content)
+                .build());
+
+        // when
+        final ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.get(url)
+                .accept(MediaType.APPLICATION_JSON));
+
+        // then
+        resultActions
+                .andExpect(MockMvcResultMatchers.status().isOk()) // HTTP 상태 코드가 200 (OK)인지 확인
+                .andExpect(MockMvcResultMatchers.jsonPath("$[0].content").value(content)) // JSON 응답의 첫 번째 요소($[0])의 content 필드 값이 content와 일치하는지 확인
+                .andExpect(MockMvcResultMatchers.jsonPath("$[0].title").value(title)); // JSON 응답의 첫 번째 요소의 title 필드 값이 title과 일치하는지 확인
+    }
+
 }

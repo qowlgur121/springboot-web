@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: 블로그 글 작성 기능 API 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/domain/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/AddArticleRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/repository/BlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +70,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,6 +85,17 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/6.1.1/e86044a9b56e7c6860d643dd11b7b44624cce4a/spring-test-6.1.1.jar!/org/springframework/test/web/servlet/result/StatusResultMatchers.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/6.1.1/4eeb5f2edb9f04d00357edcc56b59d3874b3b453/spring-web-6.1.1.jar!/org/springframework/http/HttpStatus.class" root0="SKIP_INSPECTION" />
   </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="GradleRunConfiguration" name="BlogApiControllerTest" />
+    </enabled-run-configurations>
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -95,6 +106,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.BlogApiControllerTest.addArticle.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BlogApiControllerTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.BlogApiControllerTest.findAllArticles.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build springboot-web.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.JUnitCycleQuiz.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.JUnitCycleTest.executor&quot;: &quot;Run&quot;,
@@ -144,7 +158,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringBootWebApplication">
-    <configuration name="MemberRepositoryTest.deleteAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BlogApiControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -157,7 +171,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.deleteAll&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,7 +182,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MemberRepositoryTest.deleteMemberById" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BlogApiControllerTest.addArticle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -181,7 +195,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.deleteMemberById&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest.addArticle&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -192,7 +206,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MemberRepositoryTest.saveMembers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BlogApiControllerTest.findAllArticles" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -205,7 +219,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.jihyeok.springbootweb.MemberRepositoryTest.saveMembers&quot;" />
+            <option value="&quot;com.jihyeok.springbootweb.controller.BlogApiControllerTest.findAllArticles&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -256,10 +270,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringBootWebApplication" />
+        <item itemvalue="Gradle.BlogApiControllerTest.findAllArticles" />
+        <item itemvalue="Gradle.BlogApiControllerTest" />
+        <item itemvalue="Gradle.BlogApiControllerTest.addArticle" />
         <item itemvalue="Gradle.MemberRepositoryTest.update" />
-        <item itemvalue="Gradle.MemberRepositoryTest.deleteAll" />
-        <item itemvalue="Gradle.MemberRepositoryTest.deleteMemberById" />
-        <item itemvalue="Gradle.MemberRepositoryTest.saveMembers" />
       </list>
     </recent_temporary>
   </component>
@@ -283,6 +297,12 @@
       <workItem from="1732453691127" duration="3862000" />
       <workItem from="1732492534794" duration="12297000" />
       <workItem from="1732519036384" duration="6436000" />
+      <workItem from="1732539355652" duration="4849000" />
+      <workItem from="1732544220517" duration="1913000" />
+      <workItem from="1732616964663" duration="4450000" />
+      <workItem from="1732621463334" duration="81000" />
+      <workItem from="1732621573451" duration="46000" />
+      <workItem from="1732621751555" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -316,7 +336,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732501578561</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: 블로그 글 작성 기능 API 추가">
+      <option name="closed" value="true" />
+      <created>1732539361263</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732539361263</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test: 블로그 글 작성 기능 API 테스트 코드 추가">
+      <option name="closed" value="true" />
+      <created>1732543303443</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732543303443</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가">
+      <option name="closed" value="true" />
+      <created>1732544246778</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732544246778</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +371,10 @@
     <MESSAGE value="test: controller tests" />
     <MESSAGE value="test: repository tests" />
     <MESSAGE value="feat: Project cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Project cleanup" />
+    <MESSAGE value="feat: 블로그 글 작성 기능 API 추가" />
+    <MESSAGE value="test: 블로그 글 작성 기능 API 테스트 코드 추가" />
+    <MESSAGE value="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 게시글 정보를 반환하는 응답 정보를 담는 DTO 클래스 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

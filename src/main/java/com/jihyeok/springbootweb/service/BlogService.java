@@ -6,6 +6,8 @@ import com.jihyeok.springbootweb.repository.BlogRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * 블로그 게시글 관련 비즈니스 로직을 처리하는 서비스 클래스
  */
@@ -23,5 +25,9 @@ public class BlogService {
      */
     public Article save(AddArticleRequest request) {
         return blogRepository.save(request.toEntity()); // request 객체를 엔티티로 변환 후 저장
+    }
+
+    public List<Article> findAll() {
+        return blogRepository.findAll();
     }
 }

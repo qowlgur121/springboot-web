@@ -2,13 +2,17 @@ package com.jihyeok.springbootweb.controller;
 
 import com.jihyeok.springbootweb.domain.Article;
 import com.jihyeok.springbootweb.dto.AddArticleRequest;
+import com.jihyeok.springbootweb.dto.ArticleResponse;
 import com.jihyeok.springbootweb.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * REST API 방식으로 블로그 게시글을 관리하는 Controller
@@ -27,5 +31,17 @@ public class BlogApiController {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(savedArticle);
 
+    }
+
+    @GetMapping("/api/articles")
+    public ResponseEntity<List<ArticleResponse>> findAllArticles() {
+        List<ArticleResponse> articles = blogService.findAll()
+                .stream() // List<Article>을 Stream으로 변환하고
+                .map(ArticleResponse::new) // ArticleResponse 클래스의 생성자를 호출하여 Article 객체를 ArticleResponse 객체로 매핑해서 Stream의 각 Article 객체를 ArticleResponse 객체로 변환하고
+                .toList(); // Stream 연산 결과를 다시 List<ArticleResponse>로 변환한다.
+
+        // Spring의 ResponseEntity를 사용하여 HTTP 응답을 생성
+        return ResponseEntity.ok() // ok()는 HTTP 상태 코드 200 (OK)설정하고
+                .body(articles); // 데이터베이스에서 가져온 게시글 목록을 클라이언트에게 JSON 형태로 반환한다. @RestController는 객체를 JSON, XML 등으로 변환하여 응답으로 보냄.
     }
 }
