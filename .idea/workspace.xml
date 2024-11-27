@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: 타임리프를 사용한 블로그 게시글 CRUD API 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="fix: js 연결 오류">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/ArticleListViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/ArticleListViewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/ArticleViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/ArticleViewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +309,7 @@
       <workItem from="1732687037657" duration="892000" />
       <workItem from="1732687935084" duration="1426000" />
       <workItem from="1732689367445" duration="3653000" />
-      <workItem from="1732695505334" duration="2843000" />
+      <workItem from="1732695505334" duration="4359000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -432,7 +423,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732701893490</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix: js 연결 오류">
+      <option name="closed" value="true" />
+      <created>1732703598740</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732703598740</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +452,8 @@
     <MESSAGE value="feat: 블로그 글 수정 API 구현" />
     <MESSAGE value="test: 블로그 글 수정 API 테스트 코드 추가" />
     <MESSAGE value="feat: 타임리프를 사용한 블로그 게시글 CRUD API 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 타임리프를 사용한 블로그 게시글 CRUD API 구현" />
+    <MESSAGE value="fix: js 연결 오류" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: js 연결 오류" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
