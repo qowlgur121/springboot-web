@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: User 엔티티를 위한 JPA 레포지토리 추가" />
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: Spring Security UserDetailsService 구현 (이메일 기반 사용자 조회)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -306,7 +309,7 @@
       <workItem from="1732687037657" duration="892000" />
       <workItem from="1732687935084" duration="1426000" />
       <workItem from="1732689367445" duration="3653000" />
-      <workItem from="1732695505334" duration="5878000" />
+      <workItem from="1732695505334" duration="6850000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -452,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732707693519</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: Spring Security UserDetailsService 구현 (이메일 기반 사용자 조회)">
+      <option name="closed" value="true" />
+      <created>1732708779716</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732708779716</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +488,8 @@
     <MESSAGE value="feat: 스프링 시큐리티 의존성 추가" />
     <MESSAGE value="feat: Spring Security 사용자 엔티티 구현" />
     <MESSAGE value="feat: User 엔티티를 위한 JPA 레포지토리 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: User 엔티티를 위한 JPA 레포지토리 추가" />
+    <MESSAGE value="feat: Spring Security UserDetailsService 구현 (이메일 기반 사용자 조회)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Spring Security UserDetailsService 구현 (이메일 기반 사용자 조회)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
