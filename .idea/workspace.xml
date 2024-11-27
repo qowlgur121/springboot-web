@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="fix: js 연결 오류">
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="feat: 스프링 시큐리티 의존성 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +67,9 @@
       <list>
         <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -309,7 +309,7 @@
       <workItem from="1732687037657" duration="892000" />
       <workItem from="1732687935084" duration="1426000" />
       <workItem from="1732689367445" duration="3653000" />
-      <workItem from="1732695505334" duration="4359000" />
+      <workItem from="1732695505334" duration="4934000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -431,7 +431,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732703598740</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: 스프링 시큐리티 의존성 추가">
+      <option name="closed" value="true" />
+      <created>1732706876552</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732706876552</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +461,8 @@
     <MESSAGE value="test: 블로그 글 수정 API 테스트 코드 추가" />
     <MESSAGE value="feat: 타임리프를 사용한 블로그 게시글 CRUD API 구현" />
     <MESSAGE value="fix: js 연결 오류" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: js 연결 오류" />
+    <MESSAGE value="feat: 스프링 시큐리티 의존성 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 스프링 시큐리티 의존성 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
