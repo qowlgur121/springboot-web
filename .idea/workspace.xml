@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="test: 블로그 글 삭제 API 테스트 코드 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/UpdateArticleRequest.java" afterDir="false" />
+    <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="test: 블로그 글 수정 API 테스트 코드 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/ExampleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/ArticleListViewResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/dto/ArticleViewResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/example.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/newArticle.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/controller/BlogApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/SpringBootWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/SpringBootWebApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/domain/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jihyeok/springbootweb/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jihyeok/springbootweb/controller/BlogApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +82,8 @@
         <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -106,6 +118,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.BlogApiControllerTest.addArticle.executor": "Run",
     "Gradle.BlogApiControllerTest.deleteArticle.executor": "Run",
     "Gradle.BlogApiControllerTest.executor": "Run",
@@ -133,7 +146,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.SpringBootWebApplication.executor": "Run",
+    "Spring Boot.SpringBootWebApplication.executor": "Debug",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
@@ -159,7 +172,7 @@
       <recent name="com.jihyeok.springbootweb" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BlogApiControllerTest">
+  <component name="RunManager" selected="Spring Boot.SpringBootWebApplication">
     <configuration name="BlogApiControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -271,9 +284,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringBootWebApplication" />
         <item itemvalue="Gradle.BlogApiControllerTest" />
         <item itemvalue="Gradle.BlogApiControllerTest.updateArticle" />
-        <item itemvalue="Spring Boot.SpringBootWebApplication" />
         <item itemvalue="Gradle.BlogApiControllerTest.deleteArticle" />
         <item itemvalue="Gradle.BlogApiControllerTest.findAllArticles" />
       </list>
@@ -305,7 +318,12 @@
       <workItem from="1732621463334" duration="81000" />
       <workItem from="1732621573451" duration="46000" />
       <workItem from="1732621751555" duration="2733000" />
-      <workItem from="1732624496201" duration="3454000" />
+      <workItem from="1732624496201" duration="5239000" />
+      <workItem from="1732633707410" duration="11015000" />
+      <workItem from="1732687037657" duration="892000" />
+      <workItem from="1732687935084" duration="1426000" />
+      <workItem from="1732689367445" duration="3653000" />
+      <workItem from="1732695505334" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -395,7 +413,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732624563740</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: 블로그 글 수정 API 구현">
+      <option name="closed" value="true" />
+      <created>1732627997711</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732627997711</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test: 블로그 글 수정 API 테스트 코드 추가">
+      <option name="closed" value="true" />
+      <created>1732628014945</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732628014945</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +447,9 @@
     <MESSAGE value="fix: database test data setup" />
     <MESSAGE value="feat: 블로그 글 삭제 API 구현" />
     <MESSAGE value="test: 블로그 글 삭제 API 테스트 코드 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: 블로그 글 삭제 API 테스트 코드 추가" />
+    <MESSAGE value="feat: 블로그 글 수정 API 구현" />
+    <MESSAGE value="test: 블로그 글 수정 API 테스트 코드 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: 블로그 글 수정 API 테스트 코드 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

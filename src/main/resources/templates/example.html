@@ -1,0 +1,27 @@
+<!--
+이 템플릿은 컨트롤러에서 전달받은 today와 person 객체의 정보를 사용하여 웹 페이지를 동적으로 생성한다.
+현재 날짜, 사람의 이름, 나이, 취미 목록을 표시하고,
+person 객체의 id를 사용하여 다른 API 엔드포인트(/api/articles/{id})로 이동하는 링크를 제공한다.
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Thymeleaf 어트리뷰트(예: th:text, th:each, th:if, th:href)를 사용할 수 있도록 Thymeleaf 네임스페이스를 선언-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>타임리프 익히기</h1>
+<!-- LocalDate를 yyyy-MM-dd 포맷으로 변경 -->
+<p th:text="${#temporals.format(today, 'yyyy-MM-dd')}"></p> <!--today 변수 (컨트롤러에서 전달된 LocalDate 객체)를 yyyy-MM-dd 형식으로 포맷팅하여 <p> 태그의 텍스트로 설정-->
+<div th:object="${person}">
+    <p th:text="|이름 : *{name}|"></p> <!-- *{...} 표현식을 사용하여 person 객체의 속성에 접근-->
+    <p th:text="|나이 : *{age}|"></p>
+    <p>취미</p>
+    <ul th:each="hobby : *{hobbies}"> <!--hobbies 리스트를 반복 처리하여 각 요소는 hobby 변수에 할당된다. 리스트의 각 요소(취미)마다 <li> 태그가 생성됨-->
+        <li th:text="${hobby}"></li> <!--각 hobby 요소의 값을 <li> 태그의 텍스트로 설정-->
+        <span th:if="${hobby == '운동'}">(대표 취미)</span> <!--hobby 변수가 "운동"인 경우에만 <span> 태그를 표시-->
+    </ul>
+</div>
+<a th:href="@{/api/articles/{id}(id=${person.id})}">글 보기</a> <!--/api/articles/{id} URL에 person 객체의 id 속성 값을 id 경로 변수로 추가한다. 즉, person.id의 값에 따라 /api/articles/1, /api/articles/2 등의 URL로 링크가 생성된다.-->
+</body>
+</html>

@@ -8,7 +8,7 @@ spring:
     defer-datasource-initialization: false
     ## defer-datasource-initialization : 즉시 데이터 소스 초기화 설정 (true : 지연 / false : 즉시 초기화 설정)
     hibernate:
-      ddl-auto: validate # <--- create 대신 validate로 변경
+      ddl-auto: create
   datasource:
     url: jdbc:h2:mem:testdb
     username: sa
