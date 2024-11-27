@@ -4,15 +4,9 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
-    defer-datasource-initialization: false
-    ## defer-datasource-initialization : 즉시 데이터 소스 초기화 설정 (true : 지연 / false : 즉시 초기화 설정)
-    hibernate:
-      ddl-auto: create
+    defer-datasource-initialization: true
   datasource:
     url: jdbc:h2:mem:testdb
-    username: sa
-  ## H2 콘솔 활성화
   h2:
     console:
       enabled: true
