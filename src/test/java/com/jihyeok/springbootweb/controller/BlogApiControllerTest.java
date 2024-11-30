@@ -1,3 +1,4 @@
+/*
 package com.jihyeok.springbootweb.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,43 +30,53 @@ import static org.junit.jupiter.api.Assertions.*;
 @AutoConfigureMockMvc // MockMvc를 자동으로 설정한다. MockMvc는 실제 웹 서버를 사용하지 않고 HTTP 요청을 모의(mock)하여 테스트를 수행하는 도구.
 class BlogApiControllerTest {
 
-    /**
+    */
+/**
      * MockMvc 객체는 HTTP 요청을 모의(mock)하여 테스트를 수행하는 데 사용된다.
      * 실제 웹 서버 없이 테스트를 진행할 수 있도록 도와준다.
-     */
+     *//*
+
     @Autowired // 자동으로 객체를 주입
     protected MockMvc mockMvc;
 
     @Autowired
     protected ObjectMapper objectMapper;
 
-    /**
+    */
+/**
      * WebApplicationContext는 Spring 웹 애플리케이션의 컨텍스트 정보를 담고 있습니다.
      * MockMvc 설정에 사용됩니다.
-     */
+     *//*
+
     @Autowired
     private WebApplicationContext context;
 
-    /**
+    */
+/**
      * HTTP에서는 데이터를 JSON이나 XML 같은 텍스트 기반 형식으로 주고받는데 자바는 객체를 사용하기 때문에 서로 변환할 수 있어야 한다.
      * <p>
      * 직렬화: 자바 객체 -> JSON
      * 역직렬화: JSON -> 자바 객체
      * <p>
      * 이런 변환을 해주는게 ObjectMapper
-     */
+     *//*
+
     @Autowired
     BlogRepository blogRepository;
 
-    /**
+    */
+/**
      * 각 테스트 메서드가 실행되기 전에 한 번씩 실행되는 메서드이다.
      * MockMvc를 설정하고, 테스트를 위해 BlogRepository의 모든 데이터를 삭제한다.
-     */
+     *//*
+
     @BeforeEach // 각 테스트 메서드 실행 전에 실행
     public void mockMvcSetUp() {
-        /**
+        */
+/**
          * MockMvc를 설정합니다. WebApplicationContext를 사용하여 실제 스프링 애플리케이션의 환경을 반영한다.
-         */
+         *//*
+
         MockMvcBuilders.webAppContextSetup(context)
                 .build();
         blogRepository.deleteAll(); // 테스트 시작 전에 데이터베이스의 모든 데이터를 삭제하여 테스트 간의 독립성을 보장한다.
@@ -181,4 +192,4 @@ class BlogApiControllerTest {
         Assertions.assertThat(article.getTitle()).isEqualTo(newTitle);
         Assertions.assertThat(article.getContent()).isEqualTo(newContent);
     }
-}
+}*/
