@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           source: project.jar
-          target: /home/ubuntu/instagram-server/tobe
+          target: /home/ubuntu/springboot-web/tobe
 
       - name: SSH(원격 접속)로 EC2에 접속하기
         uses: appleboy/ssh-action@v1.0.3 # Github Action 라이브러리
