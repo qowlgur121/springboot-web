@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f9229e4-490c-4057-b49c-42f52a3da748" name="Changes" comment="fix: 빌드 때 문제되는 API 테스트코드 주석처리">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/start-server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/start-server.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +67,8 @@
         <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,53 +101,53 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Gradle.BlogApiControllerTest.addArticle.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BlogApiControllerTest.deleteArticle.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BlogApiControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BlogApiControllerTest.findAllArticles.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BlogApiControllerTest.updateArticle.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build springboot-web.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitCycleQuiz.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitCycleTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitQuiz.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.JUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.deleteAll.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.deleteMemberById.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.MemberRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.getAllMembers.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.MemberRepositoryTest.getMemberById.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.getMemberByName.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.saveMember.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.saveMembers.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MemberRepositoryTest.update.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.QuizControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SpringBootWebApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/jihyeokbae/Desktop/workspace/study/springboot-web/src/main/java/com/jihyeok/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.BlogApiControllerTest.addArticle.executor": "Run",
+    "Gradle.BlogApiControllerTest.deleteArticle.executor": "Run",
+    "Gradle.BlogApiControllerTest.executor": "Run",
+    "Gradle.BlogApiControllerTest.findAllArticles.executor": "Run",
+    "Gradle.BlogApiControllerTest.updateArticle.executor": "Run",
+    "Gradle.Build springboot-web.executor": "Run",
+    "Gradle.JUnitCycleQuiz.executor": "Run",
+    "Gradle.JUnitCycleTest.executor": "Run",
+    "Gradle.JUnitQuiz.executor": "Run",
+    "Gradle.JUnitTest.executor": "Run",
+    "Gradle.MemberRepositoryTest.deleteAll.executor": "Run",
+    "Gradle.MemberRepositoryTest.deleteMemberById.executor": "Debug",
+    "Gradle.MemberRepositoryTest.executor": "Run",
+    "Gradle.MemberRepositoryTest.getAllMembers.executor": "Debug",
+    "Gradle.MemberRepositoryTest.getMemberById.executor": "Run",
+    "Gradle.MemberRepositoryTest.getMemberByName.executor": "Run",
+    "Gradle.MemberRepositoryTest.saveMember.executor": "Run",
+    "Gradle.MemberRepositoryTest.saveMembers.executor": "Run",
+    "Gradle.MemberRepositoryTest.update.executor": "Run",
+    "Gradle.QuizControllerTest.executor": "Run",
+    "Gradle.TestControllerTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.SpringBootWebApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/jihyeokbae/Desktop/workspace/study/springboot-web/src/main/java/com/jihyeok/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -311,7 +311,7 @@
       <workItem from="1732695505334" duration="12901000" />
       <workItem from="1732753160012" duration="96000" />
       <workItem from="1732848838565" duration="1020000" />
-      <workItem from="1732943199172" duration="3865000" />
+      <workItem from="1732943199172" duration="16902000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
