@@ -24,27 +24,22 @@ jobs:
       - name: 빌드된 파일 이름 변경하기
         run: mv ./build/libs/*SNAPSHOT.jar ./project.jar
 
-      - name: SCP로 EC2에 빌드된 파일 전송하기
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USERNAME }}
-          key: ${{ secrets.EC2_PRIVATE_KEY }}
-          source: project.jar
-          target: /home/ubuntu/springboot-web/tobe
+      - name: 압축하기
+        run: tar -czvf $GITHUB_SHA.tar.gz project.jar appspec.yml scripts
 
-      - name: SSH(원격 접속)로 EC2에 접속하기
-        uses: appleboy/ssh-action@v1.0.3 # Github Action 라이브러리
+      - name: AWS Resource에 접근할 수 있게 AWS credentials 설정
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          host: ${{ secrets.EC2_HOST }} # EC2의 주소
-          username: ${{ secrets.EC2_USERNAME }} # EC2 접속 username
-          key: ${{ secrets.EC2_PRIVATE_KEY }} # EC2의 Key 파일의 내부 텍스트
-          script_stop: true # 아래 script 중 실패하는 명령이 하나라도 있으면 실패로 처리
-          script: | 
-            rm -rf /home/ubuntu/springboot-web/current # 기존 배포 디렉토리 삭제
-            mkdir /home/ubuntu/springboot-web/current # 새로운 배포 디렉토리 생성
-            mv /home/ubuntu/springboot-web/tobe/project.jar /home/ubuntu/springboot-web/current/project.jar # JAR 파일 이동
-            cd /home/ubuntu/springboot-web/current # 작업 디렉토리 변경
-            sudo fuser -k -n tcp 8080 || true # 8080 포트 사용 중인 프로세스 종료 (종료 실패 시 에러 무시)
-            nohup java -jar project.jar > ./output.log 2>&1 & # JAR 파일 실행 (백그라운드, 로그 출력)
-            rm -rf /home/ubuntu/springboot-web/tobe # 임시 디렉토리 삭제
+          aws-region: ap-northeast-2
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: S3에 프로젝트 폴더 업로드하기
+        run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.tar.gz s3://jh-blog-server/$GITHUB_SHA.tar.gz
+
+      - name: Code Deploy를 활용해 EC2에 프로젝트 코드 배포
+        run: aws deploy create-deployment
+          --application-name blog-server
+          --deployment-config-name CodeDeployDefault.AllAtOnce
+          --deployment-group-name Production
+          --s3-location bucket=jh-blog-server,bundleType=tgz,key=$GITHUB_SHA.tar.gz
