@@ -25,7 +25,7 @@ nohup java -jar project.jar --server.port=$NEXT_PORT > ./output_$NEXT_PORT.log 2
 
 # 기존 서버 종료 (새 서버가 완전히 실행된 후)
 if [ ! -z "$CURRENT_PORT" ]; then
-    sleep 10 # 새 서버가 시작될 때까지 기다림 (필요에 따라 조정)
+    sleep 20 # 새 서버가 시작될 때까지 기다림 (필요에 따라 조정)
     sudo kill -9 $CURRENT_PORT || true
 fi
 
